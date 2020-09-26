@@ -1,4 +1,4 @@
-let num1=null,num2=null,opp1=null,opp2=null;
+let num1=null,num2=null,opp1=null,opp2=null,equal=0,flow=0;
 const calculate=(num1,num2,opp)=>{
     switch (opp) {
         case "+":
@@ -7,7 +7,7 @@ const calculate=(num1,num2,opp)=>{
             return (num1 - num2);
         case "*":
             return (num1 * num2);
-        case "/":
+        case "÷":
             return (num1 / num2);
         default:
             break;
@@ -26,7 +26,22 @@ function four_operations(operator){
 }
 document.querySelectorAll(".number").forEach(e=>{
     e.addEventListener("click",()=>{
+        console.log(opp2);
+        //reset to screen2 after equal
+        if(equal==1) 
+        {   
+            document.querySelector(".screen2").innerText=" ";
+            document.querySelector(".screen2").innerText+= e.innerText;
+            equal=0;
+        }else
         document.querySelector(".screen2").innerText+= e.innerText;
+        flow=(document.querySelector(".screen2").innerText).length;
+        if(flow>17){
+            document.querySelector(".screen2").style.fontSize="20px";
+        }else document.querySelector(".screen2").style.fontSize="40px";
+        if(flow>35){  // musst be fixed
+            alert("Ama yeter artık zorlama!!! :)) Bu kısım diğer versiyonda düzeltilecektir.");
+        }
     })
 })
 document.querySelectorAll(".operator").forEach(e=>{
@@ -44,14 +59,15 @@ document.querySelectorAll(".operator").forEach(e=>{
                 case "*":
                     four_operations("*")
                 break;
-                case "/":
-                    four_operations("/")
+                case "÷":
+                    four_operations("÷")
                 break;
                 case "=":
                     if(!isNaN(num1)){
                         document.querySelector(".screen2").innerText = calculate(num1,num2,opp1);
                         opp1=null;
                         opp2=null;
+                        equal=1;
                     }
                     document.querySelector(".screen1").innerText = " ";
                     break;
