@@ -36,10 +36,10 @@ document.querySelectorAll(".number").forEach(e=>{
         }else
         document.querySelector(".screen2").innerText+= e.innerText;
         flow=(document.querySelector(".screen2").innerText).length;
-        if(flow>17){
+        if(flow>20){
         document.querySelector(".screen2").style.fontSize="20px";
-        }else document.querySelector(".screen2").style.fontSize="40px";
-        if(flow>70){  // musst be fixed
+        }else document.querySelector(".screen2").style.fontSize="30px";
+        if(flow>60){  // musst be fixed
              alert("Ama yeter artık zorlama!!! :)) Bu kısım diğer versiyonda düzeltilecektir.");
         }
     })

@@ -9,13 +9,13 @@ body{
     align-content: center;
 }
 .container1{
-    width:400px ;
+    width:360px ;
     margin: auto;
     text-align: right;
 }
 .container2{
     display: grid;
-    grid-template-columns: repeat(4,100px);
+    grid-template-columns: repeat(4,90px);
     justify-content: center;
     align-content: center;
 }
@@ -32,7 +32,7 @@ button{
     height: 80px;
     border: none;
     border:1px solid white;
-    font-size:40px ;
+    font-size:30px ;
     outline: none;
 }
 .screen1{
@@ -42,7 +42,7 @@ button{
     padding-right: 10px;
 }
 .screen2{
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     padding-right: 10px;
     word-wrap:break-word;
