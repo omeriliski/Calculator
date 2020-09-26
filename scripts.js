@@ -13,18 +13,6 @@ const calculate=(num1,num2,opp)=>{
             break;
     }
 }
-function disable_true(){
-    document.querySelector(".plus").disabled="true";
-    document.querySelector(".minus").disabled="true";
-    document.querySelector(".mult").disabled="true";
-    document.querySelector(".divide").disabled="true";
-}
-function disable_false(){
-    document.querySelector(".plus").disabled="false";
-    document.querySelector(".minus").disabled="false";
-    document.querySelector(".mult").disabled="false";
-    document.querySelector(".divide").disabled="false";
-}
 function four_operations(operator){
     if(isNaN(num1)){
         opp1=operator;
@@ -40,7 +28,6 @@ document.querySelectorAll(".number").forEach(e=>{
     e.addEventListener("click",()=>{
         document.querySelector(".screen2").innerText+= e.innerText;
     })
-    
 })
 document.querySelectorAll(".operator").forEach(e=>{
     e.addEventListener("click",()=>{
@@ -71,13 +58,13 @@ document.querySelectorAll(".operator").forEach(e=>{
                 case "DEL":
                     document.querySelector(".screen2").innerText = " ";
                     break;
-                case "AC":
-                    document.querySelector(".screen1").innerText = " ";
-                    document.querySelector(".screen2").innerText = " ";
-                    break;
                 default:
                     break;
             } 
-        }  
+        }
+        if(e.innerText=="AC"){
+            document.querySelector(".screen1").innerText = " ";
+            document.querySelector(".screen2").innerText = " ";
+        }                 
     })
 })
