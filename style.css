@@ -45,6 +45,7 @@ button{
     font-size: 40px;
     color: white;
     padding-right: 10px;
+    word-wrap:break-word;
 }
 .ac{
     grid-column:1/3;

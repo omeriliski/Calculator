@@ -37,10 +37,10 @@ document.querySelectorAll(".number").forEach(e=>{
         document.querySelector(".screen2").innerText+= e.innerText;
         flow=(document.querySelector(".screen2").innerText).length;
         if(flow>17){
-            document.querySelector(".screen2").style.fontSize="20px";
+        document.querySelector(".screen2").style.fontSize="20px";
         }else document.querySelector(".screen2").style.fontSize="40px";
-        if(flow>35){  // musst be fixed
-            alert("Ama yeter artık zorlama!!! :)) Bu kısım diğer versiyonda düzeltilecektir.");
+        if(flow>70){  // musst be fixed
+             alert("Ama yeter artık zorlama!!! :)) Bu kısım diğer versiyonda düzeltilecektir.");
         }
     })
 })
