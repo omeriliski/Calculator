@@ -1,6 +1,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E75EAD;
+    background-image: linear-gradient(#eb61ad, #E289F4);
 }
 .container{
     height: 100vh;
